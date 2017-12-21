@@ -69,9 +69,17 @@ $echo "127.0.0.1 codex.dev" >> /etc/hosts
 Now you can go to the site at http://localhost:8081/ or http://wiki-explorer.dev:8081/.
 
 
-## Working with the project
+## Contributing to the project
+1. Make your intended changes on your locally cloned repository.
 
-Once the project is all set up, you can start working with the source.
-Check out the links below to get started.
-* [Contributing to the project](doc/CONTRIBUTING.md)
+2.Commit the changes and push the commit to your forked repository on GitHub.
+
+3.Ensure the changes on the commit pushed to your GitHub fork are right and bug-free.
+
+4.Create a pull request requesting to merge the commits on your fork to this repository.
+
+5.Write a concise and convincing pull request message explaining the purpose of your commits.
+
+
+For more help regarding the Wikipedia API, refer this manual:
 * [Using the Wikipedia API](doc/API.md)
