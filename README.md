@@ -1,5 +1,7 @@
 # Wikipedia Explorer
 
+[![Build Status](https://travis-ci.org/jboss-outreach/wiki-explorer.svg?branch=master)](https://travis-ci.org/jboss-outreach/wiki-explorer)
+
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/187f571b72344e4eab4c4d95c0e45503)]
 
 
@@ -83,3 +85,4 @@ Now you can go to the site at http://localhost:8081/ or http://wiki-explorer.dev
 
 For more help regarding the Wikipedia API, refer this manual:
 * [Using the Wikipedia API](doc/API.md)
+
