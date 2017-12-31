@@ -1,9 +1,7 @@
 # Wikipedia Explorer
 
 [![Build Status](https://travis-ci.org/jboss-outreach/wiki-explorer.svg?branch=master)](https://travis-ci.org/jboss-outreach/wiki-explorer)
-
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/187f571b72344e4eab4c4d95c0e45503)]
-
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/b537714b5d2c4733b391c503b5b93e6d)](https://www.codacy.com/app/jboss-outreach/wiki-explorer?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jboss-outreach/wiki-explorer&amp;utm_campaign=Badge_Grade)
 [![Gitter chat](https://badges.gitter.im/gitterHQ/services.png)](https://gitter.im/jboss-outreach)
 
 ## Contents
@@ -16,7 +14,8 @@
 This project provides a simple client for searching for Wikipedia articles using the Wikipedia API.
 
 
-## <a id="setup"></a> Setting up the project
+
+## <a id="setup"> </a> Setting up the project
 * [Installing Docker](#ins_docker)
 * [Installing Docker-compose](#ins_docker-compose)
 * [Load the configuration file](#ins_load_conf)
@@ -37,7 +36,6 @@ $ sudo apt update
 $ sudo apt install docker-engine
 $ sudo service docker start
 ```
-
 
 ### <a id="ins_docker-compose"></a>Installing Docker-compose
 Run the following on terminal/cmd:
@@ -80,11 +78,46 @@ Now you can go to the site at http://localhost:8081/ or http://wiki-explorer.dev
 
 ## <a id="contribute"></a> Contributing to the project
 
-**Step 1: Fork this project:**
+**Step 1: Initial setup of git:**
+* Configuring Git: You will have to set the global configureations in git so that hen you make a commit, it knows what to display as username. This can be done by:
+
+  ```bash
+  git config --global user.name "Your Name Here"
+  git config --global user.email youremail@example.com
+  ```
+
+**Step 2: Forking this project:**
 
 Go to the top right of the project page and click on "Fork". A fork of this repo will be created on your GitHub account.
 
-**Step 2: Code your changes**:
+![](https://image.ibb.co/fyStZm/fork.png)
+
+After forking the git, the next thing you need to do is to clone (ie. copy or download) the repository onto your local machine, this can be done by:
+
+```bash
+$ git clone https://github.com/[YOUR-USERNAME]/wiki-explorer.git #clone repository
+```
+
+* **Adding Git remotes**: You will also have to add git remote repositories to git, these are nothing but your project sources that are hosted on different networks (in this case, the jboss-outreach main repository). This is done by:
+  ```
+  $ git remote add upstream $ https://github.com/jboss-outreach/wiki-explorer.git
+  ```
+  To check if the previous step was successful run:
+  ```
+  $ git remote -v
+  ```
+  If the process was successful, you would see the following output:
+  ```
+  origin https://github.com/[YOUR-USERNAME]/wiki-explorer.git (fetch)
+
+  origin https://github.com/[YOUR-USERNAME]/wiki-explorer.git (push)
+
+  upstream https://github.com/jboss-outreach/wiki-explorer.git (fetch)
+
+  upstream https://github.com/jboss-outreach/wiki-explorer.git (push)
+  ```
+
+ **Step 3: Code your changes**:
 
 Create a new branch by:
 ```
@@ -92,25 +125,53 @@ $ git checkout -b YOUR_NEW_BRANCH_NAME
 ```
 Then create/edit files as per your coding requirements. Ensure that your code is clean and efficient, and avoid redundancies. It is also advised to follow naming conventions as and where specified. Also make sure that your code is your own, and is not closed-source or stolen.
 
-**Step 3: Commiting and pushing the changes:**
+**Step 3: Adding, commiting and pushing the changes:**
 
-*Commit* the changes and *push* the commit to your forked repository on GitHub by:
-```
-# for including inidividual files
-$ git add filename.extension
-# for including all files at once
-$ git add .
-```
-```
-$ git commit -m"Your commit message here"
-$ git push origin
-```
+* Rebasing: While you were working on the project, it is possible that other changes could have been made to the main branch of the repository. Therefore, before making a pull request, you need to fetch the new changes and rebase your branch. This can be done by:
+
+
+  ```bash
+  $ git checkout <your-new- name-branch>
+  $ git fetch upstream
+  $ git rebase upstream/master
+  ``` 
+
+* Adding the changes: you first need to tell git about what individual files(or all the files) are to be added in the commit. This is done by: 
+  
+  ```bash
+  git status        # This will list all the edited files
+  git add filename.extension #To add individual files OR
+  git add .            # To add all the files at once
+  ```
+
+* Commiting the changes:
+
+  ```bash
+  git commit -m"Enter your commit message here"
+  ```
+  The commit message should be very brief but at the same time informative. Use your words wisely!
+
+* Pushing the changes.
+
+  ```bash
+  $ git push origin <your-name-branch>
+  ```
+
 If stuck at this point, refer [here](https://readwrite.com/2013/10/02/github-for-beginners-part-2/)
+
 
 **Step 4: Sending a Pull Request (PR):**
 
-Once you are done coding the changes, commit the files and create a [*PR*](https://help.github.com/articles/about-pull-requests/). Click on "Compare across forks" when creating the PR, and select the master branch of this repo as the base. Set the head to your branch on your fork. Click on the button "Create Pull Request". Give your PR a meaningful title and a brief message explaining the purpose of your commits.
+Once you are done coding the changes, commit the files and create a [*PR*](https://help.github.com/articles/about-pull-requests/). Click on "Compare across forks" when creating the PR, and select the master branch of this repo as the base. Set the head to your branch on your fork. Click on the button "Create Pull Request". You will see something like this:
 
+![New Pull Request](https://habrastorage.org/files/191/d14/269/191d14269eae48e29d2179e32cf4fb2c.png)
+
+* If it says that it is "abe to merge", then you are good to go and can make your pull request.
+* If it says that "Can't automatically merge", then you probably have merge conflicts, this is not always the case but you will have to fix those changes.
+Write a descriptive pull request describing your added features/changes om detao;/
+
+
+Give your PR a meaningful title and a brief message explaining the purpose of your commits.
 **Step 5: Ensuring code quality**
 
 Once a PR has been created, check if it can be merged without any issues or conflicts. If there are any issues, repeat from **Step 2** and try to resolve them. Wait for a reviewer to cross check your changes, and then merge your changes.
@@ -124,9 +185,9 @@ Keep Contributing to open source! =)
 
 ## <a id = "learning"> </a> Additional Learning
 
-* [More about Wikipedia API](doc/API.md)
-* [More about Contributing on Github](doc/CONTRIBUTING.md)
 * [How to use GitHub](https://guides.github.com/activities/hello-world/)
 * [Git commands handbook](https://git-scm.com/docs)
+* [Try git and have fun!](www.try.github.io)
+* [More about Wikipedia API](doc/API.md)
+* [More about Contributing on Github](doc/CONTRIBUTING.md)
 * [Chat with us!](https://gitter.im/jboss-outreach)
-
