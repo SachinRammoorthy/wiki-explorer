@@ -11,7 +11,7 @@
 * [Additional Learning](#learning)
 
 ## <a id="desc"></a> What is Wikipedia Explorer?
-This project provides a simple client for searching for Wikipedia articles using the Wikipedia API.
+This project provides a simple client  for searching for Wikipedia articles using the Wikipedia API. The project is coded using javascript at its core to maintain simplicity.
 
 
 
@@ -23,7 +23,7 @@ This project provides a simple client for searching for Wikipedia articles using
 
 
 ### <a id="ins_docker"></a>Installing Docker
-On the official Docker website, you can download the software for any operating system. However, if you want to work on Windows, be prepared for the fact that the Docker starts services in this virtual environment (for example, via VirtualBox), which affects performance.
+On the official [Docker](https://www.docker.com/) website, you can [download](https://www.docker.com/get-docker) the software for any operating system. However, if you want to work on Windows, be prepared for the fact that the Docker starts services in this virtual environment (for example, via VirtualBox), which affects performance.
 
 Run the following on terminal/cmd:
 ```bash
@@ -78,7 +78,10 @@ Now you can go to the site at http://localhost:8081/ or http://wiki-explorer.dev
 
 ## <a id="contribute"></a> Contributing to the project
 
-**Step 1: Initial setup of git:**
+**Step 1:Download and install git:**
+ Download Git from [here](https://git-scm.com/downloads) and install it by running the installer. 
+
+**Step 2: Initial setup of git:**
 * Configuring Git: You will have to set the global configureations in git so that hen you make a commit, it knows what to display as username. This can be done by:
 
   ```bash
@@ -86,7 +89,7 @@ Now you can go to the site at http://localhost:8081/ or http://wiki-explorer.dev
   git config --global user.email youremail@example.com
   ```
 
-**Step 2: Forking this project:**
+**Step 3: Forking this project:**
 
 Go to the top right of the project page and click on "Fork". A fork of this repo will be created on your GitHub account.
 
@@ -117,7 +120,7 @@ $ git clone https://github.com/[YOUR-USERNAME]/wiki-explorer.git #clone reposito
   upstream https://github.com/jboss-outreach/wiki-explorer.git (push)
   ```
 
- **Step 3: Code your changes**:
+ **Step 4: Code your changes**:
 
 Create a new branch by:
 ```
@@ -125,7 +128,7 @@ $ git checkout -b YOUR_NEW_BRANCH_NAME
 ```
 Then create/edit files as per your coding requirements. Ensure that your code is clean and efficient, and avoid redundancies. It is also advised to follow naming conventions as and where specified. Also make sure that your code is your own, and is not closed-source or stolen.
 
-**Step 3: Adding, commiting and pushing the changes:**
+**Step 5: Adding, commiting and pushing the changes:**
 
 * Rebasing: While you were working on the project, it is possible that other changes could have been made to the main branch of the repository. Therefore, before making a pull request, you need to fetch the new changes and rebase your branch. This can be done by:
 
@@ -160,7 +163,7 @@ Then create/edit files as per your coding requirements. Ensure that your code is
 If stuck at this point, refer [here](https://readwrite.com/2013/10/02/github-for-beginners-part-2/)
 
 
-**Step 4: Sending a Pull Request (PR):**
+**Step 6: Sending a Pull Request (PR):**
 
 Once you are done coding the changes, commit the files and create a [*PR*](https://help.github.com/articles/about-pull-requests/). Click on "Compare across forks" when creating the PR, and select the master branch of this repo as the base. Set the head to your branch on your fork. Click on the button "Create Pull Request". You will see something like this:
 
@@ -172,7 +175,9 @@ Write a descriptive pull request describing your added features/changes om detao
 
 
 Give your PR a meaningful title and a brief message explaining the purpose of your commits.
-**Step 5: Ensuring code quality**
+
+
+**Step 7: Ensuring code quality**
 
 Once a PR has been created, check if it can be merged without any issues or conflicts. If there are any issues, repeat from **Step 2** and try to resolve them. Wait for a reviewer to cross check your changes, and then merge your changes.
 
@@ -191,3 +196,6 @@ Keep Contributing to open source! =)
 * [More about Wikipedia API](doc/API.md)
 * [More about Contributing on Github](doc/CONTRIBUTING.md)
 * [Chat with us!](https://gitter.im/jboss-outreach)
+
+## Help
+If you need help anywhere in the process, feel free to ask a question in [the JBoss GCI chatroom](https://gitter.im/jboss-outreach/gci).
