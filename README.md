@@ -196,6 +196,72 @@ Keep Contributing to open source! =)
 * [More about Wikipedia API](doc/API.md)
 * [More about Contributing on Github](doc/CONTRIBUTING.md)
 * [Chat with us!](https://gitter.im/jboss-outreach)
+* Rebasing: While you were working on the project, it is possible that other changes could have been made to the main branch of the repository. Therefore, before making a pull request, you need to fetch the new changes and rebase your branch. This can be done by:
+
+
+  ```bash
+  $ git checkout <your-new- name-branch>
+  $ git fetch upstream
+  $ git rebase upstream/master
+  ``` 
+
+* Adding the changes: you first need to tell git about what individual files(or all the files) are to be added in the commit. This is done by: 
+  
+  ```bash
+  git status        # This will list all the edited files
+  git add filename.extension #To add individual files OR
+  git add .            # To add all the files at once
+  ```
+
+* Commiting the changes:
+
+  ```bash
+  git commit -m"Enter your commit message here"
+  ```
+  The commit message should be very brief but at the same time informative. Use your words wisely!
+
+* Pushing the changes.
+
+  ```bash
+  $ git push origin <your-name-branch>
+  ```
+
+If stuck at this point, refer [here](https://readwrite.com/2013/10/02/github-for-beginners-part-2/)
+
+
+**Step 6: Sending a Pull Request (PR):**
+
+Once you are done coding the changes, commit the files and create a [*PR*](https://help.github.com/articles/about-pull-requests/). Click on "Compare across forks" when creating the PR, and select the master branch of this repo as the base. Set the head to your branch on your fork. Click on the button "Create Pull Request". You will see something like this:
+
+![New Pull Request](https://habrastorage.org/files/191/d14/269/191d14269eae48e29d2179e32cf4fb2c.png)
+
+* If it says that it is "abe to merge", then you are good to go and can make your pull request.
+* If it says that "Can't automatically merge", then you probably have merge conflicts, this is not always the case but you will have to fix those changes.
+Write a descriptive pull request describing your added features/changes om detao;/
+
+
+Give your PR a meaningful title and a brief message explaining the purpose of your commits.
+
+
+**Step 7: Ensuring code quality**
+
+Once a PR has been created, check if it can be merged without any issues or conflicts. If there are any issues, repeat from **Step 2** and try to resolve them. Wait for a reviewer to cross check your changes, and then merge your changes.
+
+* Additional Reference regarding clone, fork and editing a repository [**here**](https://egghead.io/lessons/javascript-how-to-fork-and-clone-a-github-repository).
+
+```
+Keep Contributing to open source! =)
+```
+
+
+## <a id = "learning"> </a> Additional Learning
+
+* [How to use GitHub](https://guides.github.com/activities/hello-world/)
+* [Git commands handbook](https://git-scm.com/docs)
+* [Try git and have fun!](www.try.github.io)
+* [More about Wikipedia API](doc/API.md)
+* [More about Contributing on Github](doc/CONTRIBUTING.md)
+
 
 ## Help
 If you need help anywhere in the process, feel free to ask a question in [the JBoss GCI chatroom](https://gitter.im/jboss-outreach/gci).
